@@ -2,32 +2,239 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* -------------------- Style Général -------------------- */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    gap: 4rem;
+
+    margin-top: 5rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-bottom: 5rem;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h2 {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 74, 173, 1) 0%,
+        rgba(93, 224, 230, 1) 100%
+    );
+
+    border-radius: 20px;
+    padding: 8px;
+
+    font-size: 25px;
+    text-align: center;
+    color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h3 {
+    padding-top: 8px;
+
+    font-size: 25px;
+
+    border-top: 2px solid;
+    border-color: rgba(0, 74, 173, 1);
+}
+
+li,
+a {
+    display: flex;
+    align-items: center;
+}
+
+li img {
+    margin-right: 10px;
+}
+
+/* -------------------- Style Titre -------------------- */
+.title {
+    text-align: center;
+    font-size: 5rem;
+
+    border-bottom: 2px solid;
+    border-color: rgba(0, 74, 173, 1);
+
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 3rem;
+
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+/* -------------------- Style Section profile -------------------- */
+.profile {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-weight: 600;
+}
+
+.profile ul {
+    margin: 1rem;
+}
+
+/* -------------------- Style Section technologies --------------------  */
+.techno {
+    grid-column: 2 / 4;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.techno h3 {
+    grid-column: 1/4;
+}
+
+.techno ul {
+    margin: 1rem;
+}
+
+.languages {
+    grid-column: 1;
+}
+
+.frameworks {
+    grid-column: 2;
+}
+
+/* -------------------- Style Section skills --------------------  */
+.skills {
+    grid-column: 1;
+    grid-row: 2;
+
+    font-weight: 600;
+}
+
+.skills ul {
+    margin: 1rem;
+}
+
+/* -------------------- Style Section langues --------------------  */
+.langues {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.langues ul {
+    margin: 1rem;
+}
+
+/* -------------------- Style Section hobbies --------------------  */
+.hobbies {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.hobbies ul {
+    margin: 1rem;
+}
+
+/* -------------------- Style Section expérience --------------------  */
+.experiences {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.experiences h3 {
+    grid-column: 1 / 4;
+}
+
+.exp_first_title {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.exp_first_content {
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+.exp_second_title {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.exp_second_content {
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.exp_third_title {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.exp_third_content {
+    grid-column: 2/4;
+    grid-row: 4;
+}
+
+/* -------------------- Style Section éducation --------------------  */
+.education {
+    grid-column: 2/4;
+    grid-row: 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 1rem;
+}
+
+.education h3 {
+    grid-column: 1 / 4;
+}
+
+.educ_first_title {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.educ_first_content {
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+.educ_second_title {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.educ_second_content {
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.educ_third_title {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.educ_third_content {
+    grid-column: 2/4;
+    grid-row: 4;
 }
