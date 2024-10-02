@@ -1,4 +1,4 @@
-# G-corp
+# Curriculum Vitae
 
 
 ## Description 
